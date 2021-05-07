@@ -1,5 +1,7 @@
 # Imageddit
 
+[![Node.js CI](https://github.com/myh999/imageddit/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/myh999/imageddit/actions/workflows/node.js.yml)
+
 An image repository where users can upload images and post comments
 
 ## Features
