@@ -1,8 +1,8 @@
 {
-  "name": "ece356-project-client",
+  "name": "imageddit",
   "version": "1.0.0",
-  "description": "Client Code for the ECE356 Project",
-  "author": "ECE 356 Group 7",
+  "description": "An image repository where users can upload images and post comments",
+  "author": "Max Hao",
   "dependencies": {
     "body-parser": "^1.19.0",
     "connect-ensure-login": "^0.1.1",
