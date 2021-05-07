@@ -14,10 +14,10 @@ exports.getLogout = function (req, res) {
 }
 
 exports.getCreateAccount = function (req, res) {
-    res.render("create-account", { user: req.user });
+    res.render("create-account");
 }
 
-exports.postCreateAccount = async function(req, res) {
+exports.postUser = async function(req, res) {
     const userInfo = req.body;
     const result = await users.createUser(
         userInfo.userName,

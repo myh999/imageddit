@@ -6,6 +6,6 @@ exports.getHome = async function (req, res) {
     if (!searchResults) {
         res.status(500).send("An error occurred!");
     } else {
-        res.render("home", { user: req.use, searchResults });
+        res.render("home", { searchResults });
     }
 }

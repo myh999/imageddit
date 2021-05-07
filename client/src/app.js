@@ -96,9 +96,6 @@ app.get("/login", auth.getLogin);
 app.post("/login", passport.authenticate("local", { failureRedirect: "/login" }), auth.postLogin);
 app.get("/logout", auth.getLogout);
 app.get("/create-account", auth.getCreateAccount);
-app.post("/create-account", auth.postCreateAccount);
+app.post("/user", auth.postUser);
 
-app.listen(3000, () => {
-    console.log("App is running at http://localhost:3000");
-    console.log("Press CTRL-C to stop");
-});
+module.exports = app;
