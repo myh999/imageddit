@@ -1,0 +1,47 @@
+<style>
+    img {
+        max-width: 50%
+    }
+</style>
+
+<h1>
+    Imageddit
+</h1>
+
+<h2>
+    Create Post
+</h2>
+<form action="/post" enctype="multipart/form-data" method="POST">
+    <input type="file" name="imageFile" accept="image/*" required/>
+    <br/>
+    <label>Title:</label>
+    <input name="title" type="text" required/>
+    <br/>
+    <input type="submit" value="Create Post"/>
+</form>
+
+<h2>
+    Posts
+</h2>
+<form action="/" method="GET">
+    <label>Search for Posts:</label>
+    <input name="q" type="text"/>
+    <input type="submit" value="Search"/>
+</form>
+
+<% if (!searchResults || searchResults.length === 0) { %>
+    <p>No Posts</p>
+<% } else { %>
+    <ul>
+        <% for (post of searchResults) { %>
+            <li>
+                <a href="/post/<%= post.postID %>"><%= post.title %></a> <br/>
+                <img src="/images/<%= post.imageFile %>" /> <br/>
+                <ul>
+                    <li>Created By: <%= post.createdByUserName %></li>
+                    <li>Created Date: <%= post.createdDate %></li>
+                </ul>
+            </li>
+        <% } %>
+    </ul>
+<% } %>

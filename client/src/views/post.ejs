@@ -1,0 +1,52 @@
+<style>
+    img {
+        max-width: 50%
+    }
+</style>
+
+<h1>
+    <%= post.title %>
+</h1>
+
+<img src= "/images/<%= post.imageFile %>" />
+
+<p>
+    Created By: <%= post.createdByUserName %> <br/>
+    Date Created: <%= post.createdDate %> <br/>
+</p>
+
+<h2>
+    Comments
+</h2>
+
+<h3>
+    Create Comment
+</h3>
+<form action="/post/<%= post.postID %>/comment" method="POST">
+    <textarea name="description"></textarea>
+    <br/>
+    <input type="submit" value="Submit Comment"/>
+</form>
+
+<h3>
+    Comments
+</h3>
+<% if (!comments || comments.length == 0) { %>
+    <p>No Comments</p>
+<% } else { %>
+    <ul>
+        <% for (const comment of comments) { %>
+            <li>
+                <%= comment.description %>
+                <ul>
+                    <li>
+                        User Name: <%= comment.userName %>
+                    </li>
+                    <li>
+                        Date Created: <%= comment.createdDate %>
+                    </li>
+                </ul>
+            </li>
+        <% } %>
+    </ul>
+<% } %>

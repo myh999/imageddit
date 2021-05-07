@@ -1,0 +1,4 @@
+DB_HOST=marmoset03.shoshin.uwaterloo.ca
+DB_USER=<user>
+DB_NAME=project_7
+DB_PASS=<password>
