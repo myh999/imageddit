@@ -36,3 +36,12 @@ $ npm install
 ```bash
 $ npm run start
 ```
+
+Further instructions to use the application can be found in the `docs` directory
+
+## Testing
+This project uses Jest as the test framework.  
+To test:
+```bash
+$ npm run test
+```

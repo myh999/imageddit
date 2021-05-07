@@ -28,7 +28,7 @@ exports.searchPosts = async function(query) {
     query = `%${query}%`;
 
     const queryString = `
-        SELECT post_id, title, image_file, created_by_user_name, created_date FROM post WHERE title LIKE ? ORDER BY created_date ASC
+        SELECT post_id, title, image_file, created_by_user_name, created_date FROM post WHERE title LIKE ? ORDER BY created_date DESC
     `;
     const parameters = [query];
 
