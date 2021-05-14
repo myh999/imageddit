@@ -22,7 +22,7 @@ $ git clone https://github.com/myh999/imageddit.git
 $ cd imageddit
 ```
 
-2. Create a new database in your MySQL server and run the `server/create_tables.sql` script to create tables. Ensure that the MySQL server is running at POrt 3306.
+2. Create a new database in your MySQL server and run the `server/create_tables.sql` script to create tables. Ensure that the MySQL server is running at Port 3306.
 
 3. Go to the `client` folder and install dependencies
 ```bash
